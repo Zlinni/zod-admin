@@ -1,0 +1,24 @@
+@layer tailwind {
+  @tailwind base;
+}
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  @apply size-[5px];
+}
+
+::-webkit-scrollbar-track {
+  @apply rounded-full bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-background-dark;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-typography-placeholder;
+}
+/* .n-text {
+  color: rgba(47, 43, 61, 0.9);
+} */
