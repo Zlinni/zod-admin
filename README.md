@@ -1,18 +1,21 @@
-# 前置
+<h1 align="center"> Zod Admin </h1>
+<p align="center">一个基于 Zod 封装实现的快速后台管理系统</p>
+<p align="center">
+  <img src="static/BwEFbOxJBo1TlNxc0vWcRxE1nWf.png" alt="curve-logo" />
+</p>
 
-- 版本：
-
-  - node：v16.17.1
-  - pnpm：8.15.5
+---
 
 # 核心
 
-- 核心实现流程，仅需定义两个 api 文件，一个 column 文件，一个 table 文件即可实现一个 CRUD 表格
-  ![](static/WnLLbG5XSojUz3xNaCmcG7bpnx2.png)
-- zod admin 分为 `core` 和 `views` 以及配置文件三部分，其中 `src\core` 是 zod admin 的核心部分，它实现了如下的功能：
+- 核心实现流程，完整示例见：[Zod Admin 使用文档](https://peropero.feishu.cn/wiki/HoJowBjtmiBXQqkqM3Lcfidonsb#MuLVdlFwboSXHNxU8QjcqY4Bnkf)，仅需定义两个 api 文件，一个 column 文件，一个 table 文件即可实现一个 CRUD 表格
+  ![](static/Jk8XbiqPXoykU6xN6o6c1DH7ngc.png)
 
+![](static/QcxKbgHePoOOYox4g9dc0ORZnbg.png)
+
+- zod admin 分为 `core` 和 `views` 以及配置文件三部分，其中 `src\core` 是 zod admin 的核心部分，它实现了如下的功能：
   - 涵盖了整体项目的框架
-  - 实现了项目的飞书登录(sso 受限暂不支持)，账号密码登录，登录重定向，错误页面重定向，路由守卫
+  - 实现了项目的账号密码登录，登录重定向，错误页面重定向，路由守卫
   - 实现了项目的用户信息模块
   - 实现了文件路由系统，菜单路由系统
   - 实现了依据 zod 的表单，表格，弹窗生成
@@ -25,9 +28,9 @@
 ## 支持主题切换
 
 - Light：
-  ![](static/W6Yzb6fWQoivlXxcoYcchQyVnAg.jpg)
+  ![](static/Ks0HbndbuoAcXhxH35EcF7Gtnsb.jpg)
 - Dark：
-  ![](static/XPV5b2To7o7N0GxkLUpciyIZnbg.jpg)
+  ![](static/EMaCbxzYfovn1tx9ItBc91yBnYc.jpg)
 
 ## 自动识别路由
 
@@ -80,7 +83,7 @@ routers: {
 
 ## 配置环境
 
-![](static/UInxbNxz3ouovexg7TCcc1E1nLh.png)
+![](static/S77Gb6EW9oQ8H8xxeUVcwN1rnBg.png)
 
 zod admin 支持环境配置，可以配置
 
@@ -94,7 +97,7 @@ zod admin 支持环境配置，可以配置
 
 ```sql
 env: {
-    git: '',
+    git: 'https://git.peropero.net/web/zod admin',
     storageKey: 'PR_RUSH_ADMIN_BASE_URL',
     option: [
       {
@@ -156,9 +159,9 @@ env: {
 
 zod admin 同时支持无代码的本地项目环境配置，用户点击系统设置后可以进行本地环境 URL 的替换，用于后端快速调试且不修改前端代码
 
-![](static/HPXiblDdao6gQtx1bl9ccXuXnfc.png)
+![](static/KtwmbWiiCo6p8CxXi54cgZMAndd.png)
 
-![](static/B1XhbuPj1oqZkExqdo4cH1S7n4d.png)
+![](static/QiYobIjamo6uGwx2BercF3rKnhf.png)
 
 ## 配置登录模块
 
@@ -182,7 +185,7 @@ login: {
   },
 ```
 
-![](static/AtlgbvzYMoLDSsxn97ZctdGqnNe.jpg)
+![](static/UyFNbZgwTotmGmxnVsGc9hFgnXb.jpg)
 
 ## 配置请求
 
@@ -249,7 +252,7 @@ zod admin 支持进行一些无代码的系统配置，目前可以配置的行�
 - 本地环境 URL
 - 点击 Table 的默认行为
 
-![](static/X4YhbAbF9o8BGaxNtFocySfnndW.png)
+![](static/HMGzb8iWRoZYgCxiu3tcpnIgnRc.png)
 
 ## Schema 组件
 
@@ -257,31 +260,31 @@ zod admin 支持进行一些无代码的系统配置，目前可以配置的行�
 
 1. 数据来源于外部的组件
 
-![](static/Dpsab1DqXoqHMSxj9bXcTC1mn9g.jpg)
+![](static/B0qGbTR7FoiBunxGEMHci2KAn9c.jpg)
 
 1. 常规组件
 
-![](static/Nk9FbWXkXoCb11xaN8ocZV4dnGg.jpg)
+![](static/TblbbrPlNoTI3exM0x6cmY3znfd.jpg)
 
 1. 组件配置
 
-![](static/X1zgbTWSho2Q4LxK19ocXvYgnJd.jpg)
+![](static/ZgJObfSQRosYqKxe7S6cFqdcnnf.jpg)
 
 1. 枚举组件
 
-![](static/JlOabHKLAoCpjMx31rqcYbshnjb.jpg)
+![](static/F9HLbcbTeoQ0tmxdPm3c7SHXnuc.jpg)
 
 1. 对象嵌套组件
 
-![](static/YDNEbWW5zoCcCCxU1kucrArPnbc.jpg)
+![](static/NwTRb65r0orK9LxA6bacFLo1n4e.jpg)
 
 1. 数组对象嵌套组件
 
-![](static/KkWzbm13AoI7FoxP9bXce0Tfngf.jpg)
+![](static/Vdn5bFuDSo3lwzxbHfdcc189nUb.jpg)
 
 1. 文件上传组件
 
-![](static/NfsgbYdCSoq2XTxKxrYcm1Xzn1d.jpg)
+![](static/WE09bcqEloRMwbxwAOIcfkGxnTc.jpg)
 
 ## Dialog
 
@@ -289,11 +292,11 @@ zod admin 支持进行一些无代码的系统配置，目前可以配置的行�
 
 1. AutoFormDialog
 
-![](static/Q3NnbcANioeGAyxlIjIcwacenXd.jpg)
+![](static/ZlFxb6gYZoAK9nxQfgGcXFT9nnb.jpg)
 
 1. MultipleDialog
 
-![](static/ILGPbxKlSoDIUTxUnzEcM2Don2c.jpg)
+![](static/X9sKbiTDcoCcGhx1lZRcVKFAnVb.jpg)
 
 ## Config
 
@@ -301,7 +304,7 @@ zod admin 支持进行一些无代码的系统配置，目前可以配置的行�
 
 1. Config
 
-![](static/R6wpbHyxrolxghxtAV8caSYZnzh.jpg)
+![](static/NnB1bNVkMobtiVxqm4Nco59Nnxf.jpg)
 
 ## Table
 
@@ -309,7 +312,7 @@ zod admin 支持进行一些无代码的系统配置，目前可以配置的行�
 
 1. CRUDTable
 
-![](static/ZmFmbYEjXoa1VTxPnAscOZdTnnb.jpg)
+![](static/AuvnbnNdTo1qmrxdRq7cGLHGnIg.jpg)
 
 ## Examples
 
@@ -331,13 +334,11 @@ zod admin 支持进行一些无代码的系统配置，目前可以配置的行�
     - 集成了 zod 相关，在此处定义 api 相关 zod schema
   - ~~application.type.ts~~
     - 集成了 ts 相关，在此处定义 api 相关类型
-
 - columns 参考
 
   - `src\core\examples\views\Table\columns`
     - 表格字段相关定义
     - 特殊操作（编辑，删除，查看）相关定义
-
 - CRUDTable.vue 参考
 
   - `src\core\examples\views\Table\CRUDTable.vue`
@@ -450,7 +451,7 @@ type RushTableReturnType<
 export const useRushTable = <T extends GenericObject>(option: {
   schema: z.ZodObject<Record<keyof T, z.ZodTypeAny>>
 }) => {
-  //
+   //
   return {
     onSearch,
     onReset,
@@ -466,7 +467,7 @@ export const useRushTable = <T extends GenericObject>(option: {
 
 ```typescript
 export const createFormSearchQueryOption = () => {
-  //
+    //
   return {
     placeholderData: keepPreviousData,
     enabled: () =>
@@ -496,11 +497,11 @@ export const useRushTablePagination = <T extends GenericObject>(option: {
   total: MaybeRefOrGetter<number>
   /**
    * 自动请求所需的refetch函数
-   * @returns
+   * @returns 
    */
   onRefetch: () => void
 }) => {
-  //
+    //
   return {
     /**
      * 分页所需props
@@ -931,7 +932,7 @@ number 类型，且可选；默认对应数字选择器组件
 number: z.coerce.number().optional().describe('数字输入')
 ```
 
-![](static/Wj0rb9jV6oNH67xNfVWconShnve.png)
+![](static/HsAsb8G5Mors03xKreWco7VunKh.png)
 
 ##### 文本输入组件
 
@@ -953,9 +954,9 @@ fallback: z.string().optional().describe('文本输入')
 </AutoForm>
 ```
 
-![](static/Rlasbi2Ego2WoZxOHX0c05DnnLf.png)
+![](static/NmJzbA8XWoT6C7xmZNicXPYkneQ.png)
 
-![](static/H5jPbTUDJoDtO2xQOI2c54LZnLd.png)
+![](static/RqTNbJrQ4oYr3uxAIV2cFzn2nYg.png)
 
 ##### 复选框组件，开关组件
 
@@ -977,7 +978,7 @@ checkbox: z.boolean().optional().describe('复选框')
 </AutoForm>
 ```
 
-![](static/PIucbzy8sojp1txo3qzcTrlBnph.png)
+![](static/OxbebHJrWozdyxxhBN2cRLU1n1T.png)
 
 ##### 日期选择器组件
 
@@ -987,7 +988,7 @@ date 类型，且可选；默认对应日期选择器
 date: z.coerce.date().optional().describe('日期选择器')
 ```
 
-![](static/RK9mb9RjzoLnDexCTabcaMxUn2g.png)
+![](static/DeeubapA0oOWdBxUKB7cxDTnnng.png)
 
 ##### 选择器组件
 
@@ -998,7 +999,7 @@ const options = ['option1', 'option2', 'option3'] as const
 select: z.enum(options).optional().describe('选择器')
 ```
 
-![](static/KGjgbhurAoeISmx8PtncZQB8nNg.png)
+![](static/S9Utb8xVrokkgmxhWCZcQ3pPnnd.png)
 
 ##### 单选组件
 
@@ -1020,7 +1021,7 @@ radio: z.enum(options).optional().describe('单选'),
 </AutoForm>
 ```
 
-![](static/ULGybXAYzoSH6SxecX0ctiD9nwU.png)
+![](static/JdsibeUYioW6j0xEm6EcTnnXnUh.png)
 
 ##### 嵌套组件
 
@@ -1034,7 +1035,7 @@ address: z.object({
   }),
 ```
 
-![](static/D7x9bJcFWoXF9Qxeo4XcDaGLnXg.png)
+![](static/Orimbrsa8o43v3xX3EZcCg5InQg.png)
 
 ##### nativeEnum
 
@@ -1045,7 +1046,7 @@ const options = ['option1', 'option2', 'option3'] as const
 select: z.enum(options).optional().describe('选择器')
 ```
 
-![](static/McqjbTa6qoP5JOx7aYpcyJZanXg.png)
+![](static/C5OHbv6JOo0LFqxO2Kjc5O1Snac.png)
 
 但有时候需要中文的 key，那么就可以使用 nativeEnum 进行定义
 
@@ -1058,4 +1059,21 @@ enum Options {
 select: z.nativeEnum(Options).optional().describe('选择器'),
 ```
 
-![](static/VBkkb2jwOo6Z0bxjLd9c72Nbnqh.png)
+![](static/Czb9b9OfzoD3zrxOsZecFgzqn2K.png)
+
+## 类型和接口定义
+
+### 类型定义
+
+1. 以 apifox 中 pero-sdk 项目的 admin/应用管理/应用管理接口为例，这是一个比较典型的 CRUD 接口
+   1. 目前所有的 mock 数据都在高级 mock 中，可以自己对分页类型的接口数据专门配置 mock
+   ![](static/AGtNb80ZUoW998xl9bycdDz1nce.png)
+
+   1. 注意：mock 成功状态的 code 必须为 0
+2. 选取 api，复制接口类型
+
+# 参考
+
+- [基于 TanStack Query 的请求状态管理 V2](https://peropero.feishu.cn/wiki/DF53wo6hgiP1j2kMiphc4Qw2nFf?from=from_copylink)
+- [基于 TanStack Table 的表格状态管理](https://peropero.feishu.cn/wiki/TgBdwlJkgiHS6Ok87ShccQHpn9e?from=from_copylink)
+- [GitHub - vantezzen/auto-form: 🌟  A React component that automatically creates a @shadcn/ui form base](https://github.com/vantezzen/auto-form/tree/main)
