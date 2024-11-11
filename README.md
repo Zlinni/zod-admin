@@ -8,7 +8,7 @@
 
 # 核心
 
-- 核心实现流程，完整示例见：[Zod Admin 使用文档](https://peropero.feishu.cn/wiki/HoJowBjtmiBXQqkqM3Lcfidonsb#MuLVdlFwboSXHNxU8QjcqY4Bnkf)，仅需定义两个 api 文件，一个 column 文件，一个 table 文件即可实现一个 CRUD 表格
+- 核心实现流程，仅需定义两个 api 文件，一个 column 文件，一个 table 文件即可实现一个 CRUD 表格
   ![](static/Jk8XbiqPXoykU6xN6o6c1DH7ngc.png)
 
 ![](static/QcxKbgHePoOOYox4g9dc0ORZnbg.png)
@@ -97,8 +97,8 @@ zod admin 支持环境配置，可以配置
 
 ```sql
 env: {
-    git: 'https://git.peropero.net/web/zod admin',
-    storageKey: 'PR_RUSH_ADMIN_BASE_URL',
+    git: '',
+    storageKey: 'Your Keys Here',
     option: [
       {
         i18n: {
@@ -334,11 +334,13 @@ zod admin 支持进行一些无代码的系统配置，目前可以配置的行�
     - 集成了 zod 相关，在此处定义 api 相关 zod schema
   - ~~application.type.ts~~
     - 集成了 ts 相关，在此处定义 api 相关类型
+
 - columns 参考
 
   - `src\core\examples\views\Table\columns`
     - 表格字段相关定义
     - 特殊操作（编辑，删除，查看）相关定义
+
 - CRUDTable.vue 参考
 
   - `src\core\examples\views\Table\CRUDTable.vue`
@@ -451,7 +453,7 @@ type RushTableReturnType<
 export const useRushTable = <T extends GenericObject>(option: {
   schema: z.ZodObject<Record<keyof T, z.ZodTypeAny>>
 }) => {
-   //
+  //
   return {
     onSearch,
     onReset,
@@ -467,7 +469,7 @@ export const useRushTable = <T extends GenericObject>(option: {
 
 ```typescript
 export const createFormSearchQueryOption = () => {
-    //
+  //
   return {
     placeholderData: keepPreviousData,
     enabled: () =>
@@ -497,11 +499,11 @@ export const useRushTablePagination = <T extends GenericObject>(option: {
   total: MaybeRefOrGetter<number>
   /**
    * 自动请求所需的refetch函数
-   * @returns 
+   * @returns
    */
   onRefetch: () => void
 }) => {
-    //
+  //
   return {
     /**
      * 分页所需props
@@ -1063,17 +1065,3 @@ select: z.nativeEnum(Options).optional().describe('选择器'),
 
 ## 类型和接口定义
 
-### 类型定义
-
-1. 以 apifox 中 pero-sdk 项目的 admin/应用管理/应用管理接口为例，这是一个比较典型的 CRUD 接口
-   1. 目前所有的 mock 数据都在高级 mock 中，可以自己对分页类型的接口数据专门配置 mock
-   ![](static/AGtNb80ZUoW998xl9bycdDz1nce.png)
-
-   1. 注意：mock 成功状态的 code 必须为 0
-2. 选取 api，复制接口类型
-
-# 参考
-
-- [基于 TanStack Query 的请求状态管理 V2](https://peropero.feishu.cn/wiki/DF53wo6hgiP1j2kMiphc4Qw2nFf?from=from_copylink)
-- [基于 TanStack Table 的表格状态管理](https://peropero.feishu.cn/wiki/TgBdwlJkgiHS6Ok87ShccQHpn9e?from=from_copylink)
-- [GitHub - vantezzen/auto-form: 🌟  A React component that automatically creates a @shadcn/ui form base](https://github.com/vantezzen/auto-form/tree/main)
